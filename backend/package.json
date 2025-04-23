@@ -1,0 +1,19 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "a ecommerce app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KARTIKEY-KATYAL/Ecommerce.git"
+  },
+  "author": "kartikey katyal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KARTIKEY-KATYAL/Ecommerce/issues"
+  },
+  "homepage": "https://github.com/KARTIKEY-KATYAL/Ecommerce#readme"
+}
