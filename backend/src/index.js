@@ -1,9 +1,9 @@
-import dotenv from "dotenv"
-import express from "express"
-import cors from "cors"
-import connectDB from "./utils/db.js"
+import dotenv from "dotenv";
+import express from "express";
+import cors from "cors";
+import connectDB from "./utils/db.js";
 
-dotenv.config()
+dotenv.config();
 
 // Connect to MongoDB
 connectDB();
@@ -14,9 +14,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-import userRoutes from "../routes/user.routes.js"
+import userRoutes from "./routes/user.routes.js";
 
-app.use("/api/v1/auth",userRoutes)
+app.use("/api/v1/auth", userRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
