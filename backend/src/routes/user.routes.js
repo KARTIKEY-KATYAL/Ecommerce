@@ -1,4 +1,5 @@
 import express from "express";
+import {upload} from "../middleware/upload.middleware.js"
 import {
   LoginUser,
   LogoutUser,
@@ -7,7 +8,16 @@ import {
 
 const router = express();
 
-router.post("/register", RegisterUser);
+router.post(
+  "/register",
+  upload.fields([
+    {
+      name: "avatar",
+      maxCount: 1,
+    },
+  ]),
+  RegisterUser
+);
 router.post("/login", LoginUser);
 router.get("/logout", LogoutUser);
 
